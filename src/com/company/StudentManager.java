@@ -280,7 +280,7 @@ public class StudentManager {
 
     } // Function Ratio Student
 
-     public void sortAZ() throws IOException {
+    public void sortAZ() throws IOException {
 
         BufferedReader reader = null;
         reader = new BufferedReader(new FileReader("D:\\Data\\111.csv"));
@@ -434,21 +434,50 @@ public class StudentManager {
 
             }
         });
-            System.out.println(listStu.get(0).getID() + "," + listStu.get(0).getFirstName() + ","
-                    + listStu.get(0).getDay() + ", " + listStu.get(0).getAddress() + ", "
-                    + listStu.get(0).getGender() + ", " + listStu.get(0).getListSubject() + ", " + listStu.get(0).getIdSubject()
-                    + "," + listStu.get(0).getNameSubject() + ", " + listStu.get(0).getGpa());
+        System.out.println(listStu.get(0).getID() + "," + listStu.get(0).getFirstName() + ","
+                + listStu.get(0).getDay() + ", " + listStu.get(0).getAddress() + ", "
+                + listStu.get(0).getGender() + ", " + listStu.get(0).getListSubject() + ", " + listStu.get(0).getIdSubject()
+                + "," + listStu.get(0).getNameSubject() + ", " + listStu.get(0).getGpa());
 
 
-        System.out.println(listStu.get(listStu.size()-1).getID() + "," + listStu.get(listStu.size()-1).getFirstName() + ","
-                + listStu.get(listStu.size()-1).getDay() + ", " + listStu.get(listStu.size()-1).getAddress() + ", "
-                + listStu.get(listStu.size()-1).getGender() + ", " + listStu.get(listStu.size()-1).getListSubject() + ", " + listStu.get(listStu.size()-1).getIdSubject()
-                + "," + listStu.get(listStu.size()-1).getNameSubject() + ", " + listStu.get(listStu.size()-1).getGpa());
-        }  // Function Min/Max Student
+        System.out.println(listStu.get(listStu.size() - 1).getID() + "," + listStu.get(listStu.size() - 1).getFirstName() + ","
+                + listStu.get(listStu.size() - 1).getDay() + ", " + listStu.get(listStu.size() - 1).getAddress() + ", "
+                + listStu.get(listStu.size() - 1).getGender() + ", " + listStu.get(listStu.size() - 1).getListSubject() + ", " + listStu.get(listStu.size() - 1).getIdSubject()
+                + "," + listStu.get(listStu.size() - 1).getNameSubject() + ", " + listStu.get(listStu.size() - 1).getGpa());
+    }  // Function Min/Max Student
+
+
+    public void test() throws IOException {
+        BufferedReader reader = null;
+        reader = new BufferedReader(new FileReader("D:\\Data\\111.csv"));
+        String line = null;
+        String splitBy = ",";
+        while ((line = reader.readLine()) != null) {
+            String[] Student = line.split(splitBy);
+            System.out.println(Student[2]);
 
 
         }
+    }
+    public void printList(String[] listStu1 , String line) {
+        listStu1= line.split(",");
+        System.out.println(listStu1[0]+","+listStu1[1]+","+listStu1[2]+","+listStu1[3]+","+listStu1[4]+","+listStu1[5]+","+listStu1[6]+","+listStu1[7]+","+listStu1[8]);
+    }
 
+    public void test2(List<Student> list) {
+
+        for (int i = 0; i < list.size(); i++) {
+            for (int j = i + 1; j <= list.size(); j++) {
+                if (list.get(i).getFirstName().toString() == (list.get(j).getFirstName().toString())) {
+
+                    System.out.println(list);
+
+
+                }
+            }
+        }
+    }
+}
 
 
 
