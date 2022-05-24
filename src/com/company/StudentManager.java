@@ -463,7 +463,7 @@ public class StudentManager {
     public void printList(String[] listStu1, String line) {
         listStu1 = line.split(",");
         System.out.println(listStu1[0] + "," + listStu1[1] + "," + listStu1[2] + "," + listStu1[3] + "," + listStu1[4] + "," + listStu1[5] + "," + listStu1[6] + "," + listStu1[7] + "," + listStu1[8]);
-    }
+    } //Function
 
 }
 
