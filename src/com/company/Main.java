@@ -48,7 +48,7 @@ public class Main {
                 case "11":
                     studentManager.countName();
                 case "12":
-// SameNameDay;
+                    studentManager.test();
                 case "13":
                         studentManager.SearchName();
                 case "0":
@@ -84,8 +84,7 @@ public class Main {
         System.out.println("9. Percent Good, Pretty Average, Weak");
         System.out.println("10. Sort Student A-Z");
         System.out.println("11. Same Student");
-        System.out.println("12. Same Student Day");
-        System.out.println("13. Same Name Input");
+        System.out.println("12. Same Name Input");
         System.out.println("0. exit.");
         System.out.println("---------------------------");
         System.out.print("Please choose: ");
