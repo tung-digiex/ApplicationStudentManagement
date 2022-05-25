@@ -13,8 +13,6 @@ public class StudentManager {
 
                 System.out.println("" + Student[0] + ",Name=" + " " + Student[1] + ",Address=" + " " + Student[2] + " " + ",Date=" + " " + Student[3] + " " + ",Gender= " + Student[4] + " " + ",DSMH=" + " " + Student[5] + " " + ",lisSubkect=" + " " + Student[6] + " " + ",NameSubject=" + " " + Student[7] + " " + ",Gpa=" + Student[8]);
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -78,7 +76,7 @@ public class StudentManager {
         String line = null;
         while ((line = reader.readLine()) != null) {
             String[] Student = line.split(",");
-            if (Student[0].contains(iD.toString())) {
+            if (Student[0].contains(iD)) {
                 System.out.println(" ID error, please re-enter");
                 return false;
             }
@@ -142,7 +140,7 @@ public class StudentManager {
 
         while ((line = reader.readLine()) != null) {
             String[] Student = line.split(",");
-            if (Student[0].contains(iD.toString())) {
+            if (Student[0].contains(iD)) {
                 System.out.println(Arrays.toString(Student));
                 System.out.println("GPA: " + Student[8]);
                 Statistical(Integer.parseInt(Student[8]));
@@ -205,17 +203,17 @@ public class StudentManager {
         while ((line = reader.readLine()) != null) {
             String[] Student = line.split(splitBy);
             int iD = Integer.parseInt(Student[0]);
-            String firstName = Student[1].toString();
-            String address = Student[2].toString();
-            String day = Student[3].toString();
-            String gender = Student[4].toString();
+            String firstName = Student[1];
+            String address = Student[2];
+            String day = Student[3];
+            String gender = Student[4];
             ;
-            String listSubject = Student[5].toString();
+            String listSubject = Student[5];
             ;
             int idSubject = Integer.parseInt(Student[6]);
-            String nameSubject = Student[7].toString();
+            String nameSubject = Student[7];
             ;
-            float gpa = Integer.parseInt(Student[8].toString());
+            float gpa = Integer.parseInt(Student[8]);
             Student stu = new Student(iD, firstName, address, day, gender, listSubject, idSubject, nameSubject, gpa);
             listStu.add(stu);
         }
@@ -237,17 +235,6 @@ public class StudentManager {
     } // Function Sort Student
 
     public void Ratio() throws IOException {
-//        BufferedReader reader = null;
-//        reader = new BufferedReader(new FileReader("D:\\Data\\111.csv"));
-//        String line = null;
-//        String[] Student = new String[0];
-//        while ((line = reader.readLine()) != null) {
-//            Student = line.split(",");
-//        }
-//        int mark1 = Integer.parseInt(Student[0]);
-//        for (int i = 0; i < Student[8].length(); i++) {
-//            System.out.println(mark1);
-//        }
         BufferedReader reader = null;
         reader = new BufferedReader(new FileReader("D:\\Data\\111.csv"));
         String line = null;
@@ -290,17 +277,17 @@ public class StudentManager {
         while ((line = reader.readLine()) != null) {
             String[] Student = line.split(splitBy);
             int iD = Integer.parseInt(Student[0]);
-            String firstName = Student[1].toString();
-            String address = Student[2].toString();
-            String day = Student[3].toString();
-            String gender = Student[4].toString();
+            String firstName = Student[1];
+            String address = Student[2];
+            String day = Student[3];
+            String gender = Student[4];
             ;
-            String listSubject = Student[5].toString();
+            String listSubject = Student[5];
             ;
             int idSubject = Integer.parseInt(Student[6]);
-            String nameSubject = Student[7].toString();
+            String nameSubject = Student[7];
             ;
-            float gpa = Integer.parseInt(Student[8].toString());
+            float gpa = Integer.parseInt(Student[8]);
             Student stu = new Student(iD, firstName, address, day, gender, listSubject, idSubject, nameSubject, gpa);
             listStu.add(stu);
         }
@@ -372,17 +359,17 @@ public class StudentManager {
         while ((line = reader.readLine()) != null) {
             String[] Student = line.split(splitBy);
             int iD = Integer.parseInt(Student[0]);
-            String firstName = Student[1].toString();
-            String address = Student[2].toString();
-            String day = Student[3].toString();
-            String gender = Student[4].toString();
+            String firstName = Student[1];
+            String address = Student[2];
+            String day = Student[3];
+            String gender = Student[4];
             ;
-            String listSubject = Student[5].toString();
+            String listSubject = Student[5];
             ;
             int idSubject = Integer.parseInt(Student[6]);
-            String nameSubject = Student[7].toString();
+            String nameSubject = Student[7];
             ;
-            float gpa = Integer.parseInt(Student[8].toString());
+            float gpa = Integer.parseInt(Student[8]);
             Student stu = new Student(iD, firstName, address, day, gender, listSubject, idSubject, nameSubject, gpa);
             listStu.add(stu);
         }
@@ -394,7 +381,7 @@ public class StudentManager {
 
         for (int i = 0; i < list.size(); i++) {
             for (int j = i + 1; j < list.size(); j++) {
-                if (list.get(i).getFirstName().toString().equals(list.get(j).getFirstName().toString())) {
+                if (list.get(i).getFirstName().equals(list.get(j).getFirstName())) {
 
                     System.out.println(list.get(i).getID() + " " + list.get(i).getFirstName());
                     System.out.println(list.get(j).getID() + " " + list.get(j).getFirstName());
@@ -413,17 +400,17 @@ public class StudentManager {
         while ((line = reader.readLine()) != null) {
             String[] Student = line.split(splitBy);
             int iD = Integer.parseInt(Student[0]);
-            String firstName = Student[1].toString();
-            String address = Student[2].toString();
-            String day = Student[3].toString();
-            String gender = Student[4].toString();
+            String firstName = Student[1];
+            String address = Student[2];
+            String day = Student[3];
+            String gender = Student[4];
             ;
-            String listSubject = Student[5].toString();
+            String listSubject = Student[5];
             ;
             int idSubject = Integer.parseInt(Student[6]);
-            String nameSubject = Student[7].toString();
+            String nameSubject = Student[7];
             ;
-            float gpa = Integer.parseInt(Student[8].toString());
+            float gpa = Integer.parseInt(Student[8]);
             Student stu = new Student(iD, firstName, address, day, gender, listSubject, idSubject, nameSubject, gpa);
             listStu.add(stu);
         }
